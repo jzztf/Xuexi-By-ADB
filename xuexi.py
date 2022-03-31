@@ -172,7 +172,8 @@ class XuexiByADB(AnalyUIText):
                                 break
                             else:
                                 if pattern == 'article':
-                                    self.swipeScreen(540, 1440, 540, 480, 2000)
+                                    #self.swipeScreen(540, 1440, 540, 480, 2000)
+                                    self.swipeScreen(350, 1000, 350, 350, 2000) # 旧手机屏小，适当修改滑动坐标
                                 elif pattern == 'video':
                                     time.sleep(1)
                         single_time = time.perf_counter()- start_cputime
@@ -191,7 +192,8 @@ class XuexiByADB(AnalyUIText):
             若主循环未结束则上滑更新标题列表页面
             '''
             if new_title:
-                self.swipeScreen(540, 1400, 540, 520)
+                #self.swipeScreen(540, 1400, 540, 520)
+                self.swipeScreen(350, 1000, 350, 350) # 旧手机屏小，适当修改滑动坐标
         
         print('='*120)
         print(f'累计耗时：{total_time/60:6.2f}m '.rjust(115))
